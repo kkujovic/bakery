@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold:      #C8A05A;
+  --brown:     #6B3D2E;
+  --dark:      #2E1A10;
+  --cream:     #F5EDD8;
+  --parchment: #FAF5EC;
+  --wheat:     #D4B896;
+  --stone:     #9A8070;
+  --pink:      #F2DED5;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--parchment);
+  color: var(--dark);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
