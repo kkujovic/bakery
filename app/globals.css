@@ -13,6 +13,55 @@
   --pink:      #F2DED5;
 }
 
+/* ─── RAINBOW BORDER BUTTON ─── */
+.rainbow-border-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2.2rem;
+  background: var(--dark);
+  color: var(--parchment);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  z-index: 0;
+  transition: transform 0.15s ease, background 0.22s ease;
+}
+.rainbow-border-btn::before,
+.rainbow-border-btn::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #C8A05A, #D4B896, #F5EDD8, #F2DED5, #9A8070, #6B3D2E, #C8A05A, #D4B896, #F5EDD8, #9A8070);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: rainbow-shift 20s linear infinite;
+}
+.rainbow-border-btn::after {
+  filter: blur(18px);
+  opacity: 0.55;
+}
+.rainbow-border-btn:hover { transform: translateY(-2px); }
+.rainbow-border-btn:active { transform: translateY(0); }
+.rainbow-border-btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+@keyframes rainbow-shift {
+  0%   { background-position: 0 0; }
+  50%  { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {

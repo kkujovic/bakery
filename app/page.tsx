@@ -1,5 +1,6 @@
 import "./bakery.css";
 import BakeryScripts from "@/components/BakeryScripts";
+import { RainbowBorderButton } from "@/components/ui/rainbow-borders-button";
 
 export default function Home() {
   return (
@@ -35,7 +36,7 @@ export default function Home() {
             carries more than a century of dedication in each crust.
           </p>
           <div className="hero-actions">
-            <a href="#categories" className="btn-primary">Explore the Menu</a>
+            <RainbowBorderButton href="#categories">Explore the Menu</RainbowBorderButton>
             <div className="hero-stat">
               <span className="num">4.7</span>
               <div>
